@@ -27,6 +27,7 @@ while True:
 
         if cv2.waitKey(100) & 0xFF == ord('q'):
             break
+
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
