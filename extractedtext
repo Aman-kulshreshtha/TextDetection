@@ -1,0 +1,93 @@
+Example : Quicksort
+
+Consider the above list A with n = 12 elements. The algorithm begins by pushing the
+boundary values 1 and 12 of A onto the stacks to yield
+
+LOWER: 1 UPPER: 12
+
+In order to apply the reduction step, the algorithm first removes the top values 1 and
+12 from the stacks, leaving
+
+LOWER: (empty) UPPER: (empty)
+
+and then applies the reduction step to the corresponding list A[1], A[2], ..., A[12]. The
+reduction step, as executed above, finally places the first element, 44, in A[5].
+
+Accordingly, the algorithm pushes the boundary values 1 and 4 of the
+first sublist and the boundary values 6 and 12 of the second sublist
+onto the stacks to yield
+
+LOWER: 1,6 _ UPPER: 4, 12
+
+In order to apply the reduction step again, the algorithm removes the
+top values, 6 and 12, from the stacks, leaving
+
+LOWER: 1 UPPER: 4
+
+and then applies the reduction step to the corresponding sublist A[6],
+A[7], .... A[12]. Observe that the second sublist has only one element.
+Accordingly, the algorithm pushes only the boundary values 6 and 10 of
+the first sublist onto the stacks to yield
+
+LOWER: 1, 6 UPPER: 4, 10
+
+Time Complexity of Quicksort
+
+First Worst Case: If the array is already sorted and first element is always selected as pivot:
+123456789
+i ]
+] /Ido right to left scan until u find first element smaller than pivot.
+i=j=loc /as j= loc, return from partition
+123456789
+
+Pivot is compared to all other remaining elements but is already at its correct position. Array is
+partitioned into only one subarray at each step; one subarray is always empty and the other
+subarray is of size one less than the previous one.
+
+In the worst case, all the splits will be skewed to the extreme: one of the two subarrays will be
+empty while the size of the other will be just one less than the size of a subarray being
+partitioned.
+
+If A[O..n-1] is a strictly increasing array and we use A[O] as the pivot, the left-to-right scan will stop
+on A[1] while the right-to-left scan will go all the way to reach A[O], indicating the split at position 0.
+
+call to Partition: n comparisons
+2°" call to Partition: n-1 comparisons
+39 Call to Partition: n-2 comparisons
+The total number of key comparisons made will be equal to
+Cworsi(n)= n+(n-1) + .......+ 1 = n(n + 1)}/2 = O(n?)
+
++_ The number of key comparisons in the best case, will satisfy the recurrence
+Cbest(r])=2Cbest (Fl/2) + n for n > 17 Cbest(1)=0
+
+T(n) = 27 (n/2) +n
+= 2{27T(n/2/2) + n/2} +n= 22 T(n/4) +n +n
+= 22{ 2 T(n/4/2) + n/4} +n +n =23T(n/8)+ n+ n +n
+= 23 T(n/ 23) + 3.n
+= 2k T(n/ 28) + k.n
+
+If n = 2%, then k= logn.
+
+T(n)=n . T(n/n)+ k.n= nT(1) + k.n
+=n. a + n.loggn
+
+* Cbest(n) - @(n log2n)
+
+Recursion
+
+Recursion is an important concept in computer science.
+
+Suppose P is a procedure containing either a Call statement to itself or a Call
+statement to a second procedure that may eventually result in a Call statement back
+to the original procedure P. Then P is called a recursive procedure.
+
+A recursive procedure must have the following two properties :
+
+- There must be certain criteria, called base criteria, for which the procedure does
+not call itself.
+
+- Each time the procedure does call itself (directly or indirectly), it must be closer
+to the base criteria.
+
+A recursive procedure with these two properties is said to be well-defined.
+
