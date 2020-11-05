@@ -1,4 +1,4 @@
-# Python Program to extract text from a video file
+# Python Program to extract text( in english ) from a video file
 
 ### Libraries and modules used
 
