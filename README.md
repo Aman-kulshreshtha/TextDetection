@@ -19,4 +19,11 @@ Video is captured using the Opencv video capture method . and then The text is e
 2. Provide the necesary name of video file , name of output file ,framerate and path to pytysseract executable.
 
 
+### Limitations:
+1. It is necessary that the text should be properly focussed for the OCR to work properly.
+2. Watermarks and excess of animations will produce garbage results.
+3. If a text is displayed for too long , it will be printed multiple times.
+
+
+
 
