@@ -9,6 +9,7 @@
 ### Working
 
 This program extracts the text shown in a video file and writes in the file named 'extractedtext.txt' .
+The video file can be either local file or live capture from Webcam. 
 Video is captured using the Opencv video capture method . and then The text is extracted using the pytesseract library.
 
 
