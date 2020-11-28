@@ -10,14 +10,14 @@
 
 This program extracts the text shown in a video file and writes in the file named 'extractedtext.txt' .
 The video file can be either local file or live capture from Webcam. 
-Video is captured using the Opencv video capture method . and then The text is extracted using the pytesseract library.
+Video is captured using the Opencv video capture method  and then the text is extracted using the pytesseract library.
 
 
 ### To Run in your local machine :
 
 1. Download the project code 
 2. Install the pytesseract OCR .
-2. Provide the necesary name of video file , name of output file ,framerate and path to pytysseract executable.
+2. Provide the necesary name of video file, name of output file, framerate and path to pytysseract executable.
 
 
 ### Limitations:
